@@ -1,5 +1,6 @@
 package com.neppplus.jickbangclone.datas
 
+import java.io.Serializable
 import java.text.NumberFormat
 import java.util.*
 
@@ -9,7 +10,7 @@ class RoomData(
     val floor: Int,
     val description: String
 
-) {
+) : Serializable {
 
     fun getFormattedPrice(): String {
         if (this.price < 10000) {
