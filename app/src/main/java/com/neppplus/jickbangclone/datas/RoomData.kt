@@ -14,8 +14,12 @@ class RoomData(
     fun getFormattedPrice(): String {
         if (this.price < 10000) {
             return NumberFormat.getNumberInstance(Locale.KOREA).format(this.price)
+        } else if (this.price % 10000 == 0) {
+            val uk = this.price / 10000
+
+            return "${uk}억"
         } else {
-          //  return "${this.price / 10000}억 ${NumberFormat.getNumberInstance(Locale.KOREA).format(this.price % 10000)}"
+            //  return "${this.price / 10000}억 ${NumberFormat.getNumberInstance(Locale.KOREA).format(this.price % 10000)}"
 
             val uk = this.price / 10000
             val rest = this.price % 10000
