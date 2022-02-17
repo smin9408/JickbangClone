@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         mRoomList.add( RoomData(27000,"안양시 만안구",6,"2번째 방입니다.") )
         mRoomList.add( RoomData(36000,"서울시 영등포구",15,"3번째 방입니다.") )
         mRoomList.add( RoomData(52000,"서울시 중구",33,"4번째 방입니다.") )
-        mRoomList.add( RoomData(3000,"서울시 은평구",-1,"5섯번째 방입니다.") )
+        mRoomList.add( RoomData(3000,"서울시 은평구",0,"5섯번째 방입니다.") )
         mRoomList.add( RoomData(12000,"서울시 강남구",3,"6섯번째 방입니다.") )
         mRoomList.add( RoomData(9500,"서울시 마포구",5,"7곱번째 방입니다.") )
         mRoomList.add( RoomData(3000,"서울시 관악구",-1,"8번째 방입니다.") )
@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
 
         mAdapter = RoomAdapter(this, R.layout.room_list_item, mRoomList)
         roomListView.adapter = mAdapter
+
 
     }
 }
